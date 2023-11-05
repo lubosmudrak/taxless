@@ -1,0 +1,16 @@
+{
+  "name": "taxless_tests",
+  "version": "1.0.0",
+  "description": "tests for taxless project",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Légia Slobody",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.10",
+    "cypress": "^13.4.0",
+    "typescript": "^5.2.2"
+  }
+}
