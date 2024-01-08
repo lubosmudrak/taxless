@@ -1,0 +1,6 @@
+[book]
+authors = ["Ľuboš Mudrák"]
+language = "sk"
+multilingual = false
+src = "src"
+title = "TAXLESS - Funkčná špecifikácia"
