@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Používateľsky panel</title>
+    </head>
+
+    <body>
+        <p>Používateľsky panel prihláseného používateľa.</p>
+    </body>
+</html>

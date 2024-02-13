@@ -9,7 +9,13 @@ mod pages;
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-    .mount("/", routes![pages::index])
+    .mount("/", routes![
+        pages::index,
+        pages::dve_percenta,
+        pages::prihlasenie,
+        pages::pouzivatelsky_panel,
+        pages::zuctovanie_ziadost
+        ])
     .mount("/", FileServer::from(relative!("src/frontend")))
     .attach(Template::fairing())
 }
