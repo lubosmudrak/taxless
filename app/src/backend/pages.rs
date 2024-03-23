@@ -2,8 +2,12 @@ use rocket_dyn_templates::{Template, context};
 
 ///Main webpage of the project
 #[get("/")]
-pub fn index() -> Template{
-    Template::render("index", context!{})
+pub fn index() -> Template {
+    // Toto vsetko len placeholder hej!
+    Template::render("index", context! {
+        user_logged_in: true, 
+        user_name: "Prihlaseny" 
+    })
 }
 
 /// The front page for request for remittance of two percent of income tax
