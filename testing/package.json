@@ -9,8 +9,8 @@
   "author": "Légia Slobody",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.8.10",
-    "cypress": "^13.4.0",
-    "typescript": "^5.2.2"
+    "@types/node": "^20.12.7",
+    "cypress": "^13.8.0",
+    "typescript": "^5.4.5"
   }
 }
