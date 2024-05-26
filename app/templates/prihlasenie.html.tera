@@ -39,15 +39,15 @@
                             Prihlásenie
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="/prihlasovacie_udaje" method="POST">
                                 <div class="form-group mb-3">
                                     <label for="exampleInputEmail1">Emailová adresa</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Zadajte email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Zadajte email" name="username">
                                     <small id="emailHelp" class="form-text text-muted">Vašu emailovú adresu nikomu neposkytneme.</small>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="exampleInputPassword1">Heslo</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Heslo">
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Heslo" name="password">
                                 </div>
                                 <div class="form-group form-check mb-3">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">

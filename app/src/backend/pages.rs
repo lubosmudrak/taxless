@@ -1,12 +1,22 @@
 use rocket_dyn_templates::{Template, context};
+use rocket::http::CookieJar;
 
 ///Main webpage of the project
 #[get("/")]
-pub fn index() -> Template {
+pub fn index(cookies: &CookieJar<'_>) -> Template {
     // Toto vsetko len placeholder hej!
+
+    let login_state = match cookies.get("login_state"){
+        Some(login_state) => login_state.to_string(),
+        None => "false".to_string()
+    };
+    let mut username = match cookies.get("username"){
+        Some(username) => username.to_string(),
+        None => "USERNAME_ERROR".to_string()
+    };
     Template::render("index", context! {
-        user_logged_in: true, 
-        user_name: "Prihlaseny" 
+        user_logged_in: login_state,
+        user_name: username
     })
 }
 
