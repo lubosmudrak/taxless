@@ -21,7 +21,11 @@
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser">
                     {% if user_logged_in %}
-                        <li><a class="dropdown-item" href="/logout">Odhlasit sa</a></li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                <input class="dropdown-item" type="submit" value="Odhlasit sa">
+                            </form>
+                        </li>
                         <li><a class="dropdown-item" href="/pouzivatelsky_panel">Použivatelsky panel</a></li>
                     {% else %}
                         <li><a class="dropdown-item" href="/prihlasenie">Prihlásiť sa</a></li>
