@@ -6,12 +6,18 @@ use rocket::http::CookieJar;
 pub fn index(cookies: &CookieJar<'_>) -> Template {
     // Toto vsetko len placeholder hej!
 
-    let login_state = match cookies.get("login_state"){
-        Some(login_state) => login_state.to_string(),
-        None => "false".to_string()
+    let login_state: bool = match cookies.get("login_state"){
+        Some(login_state) => {
+            if login_state.value() == "true"{
+                true
+            } else {
+                false
+            }
+        },
+        None => false
     };
-    let mut username = match cookies.get("username"){
-        Some(username) => username.to_string(),
+    let username = match cookies.get("username"){
+        Some(username) => username.value().to_string(),
         None => "USERNAME_ERROR".to_string()
     };
     Template::render("index", context! {
