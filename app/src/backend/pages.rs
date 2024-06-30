@@ -15,6 +15,7 @@ pub fn index(cookies: &CookieJar<'_>) -> Template {
         None => "USERNAME_ERROR".to_string()
     };
     Template::render("index", context! {
+        page_title: "TAXLESS",
         user_logged_in: login_state,
         user_name: username
     })
@@ -23,25 +24,33 @@ pub fn index(cookies: &CookieJar<'_>) -> Template {
 /// The front page for request for remittance of two percent of income tax
 #[get("/dve_percenta")]
 pub fn dve_percenta() -> Template{
-    Template::render("dve_percenta", context!{})
+    Template::render("dve_percenta", context!{
+        page_title: "Poukázanie 2% dane"
+    })
 }
 
 /// Screen for login and user registration
 #[get("/prihlasenie")]
 pub fn prihlasenie() -> Template{
-    Template::render("prihlasenie", context!{})
+    Template::render("Prihlasenie", context!{
+        page_title: "Prihlásenie"
+    })
 }
 
 /// User panel for the logged in user
 #[get("/pouzivatelsky_panel")]
 pub fn pouzivatelsky_panel() -> Template{
-    Template::render("pouzivatelsky_panel", context!{})
+    Template::render("pouzivatelsky_panel", context!{
+        page_title: "Používateľsky panel"
+    })
 }
 
 /// The front page for application for income tax settlement
 #[get("/zuctovanie_ziadost")]
 pub fn zuctovanie_ziadost() -> Template{
-    Template::render("zuctovanie_ziadost", context!{})
+    Template::render("zuctovanie_ziadost", context!{
+        page_title: "Zúčtovanie"
+    })
 }
 
 
