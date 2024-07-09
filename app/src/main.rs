@@ -20,6 +20,10 @@ fn rocket() -> _ {
         requests::login_request,
         requests::logout_request
         ])
-    .mount("/", FileServer::from(relative!("src/frontend")))
+    .mount("/js", FileServer::from(relative!("src/frontend/js")))
+    .mount("/img", FileServer::from(relative!("src/frontend/img")))
+    .mount("/css", FileServer::from(relative!("src/frontend/css")))
     .attach(Template::fairing())
+    
+    
 }
