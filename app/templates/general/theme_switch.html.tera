@@ -1,0 +1,6 @@
+
+
+<!-- Prepinac svetlej/tmavej theme -->
+<div id="themeSwitcher" onclick="change_theme()">
+    <span>&#9790;</span>
+</div>
