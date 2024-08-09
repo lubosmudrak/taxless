@@ -1,0 +1,13 @@
+<div class="col-12 col-md-3 col-xl-2 px-sm-2 px-0 border-end border-md-end-0 mb-4 mb-md-0">
+    <div class="d-flex flex-column align-items-center align-items-sm-start px-1 pt-2">
+        <div class="list-group w-100">
+            {% if user_logged_in %}
+                <a href="/pouzivatelsky_panel" class="list-group-item list-group-item-action text-primary">Používateľský panel</a>
+                <a href="/zuctovanie_ziadost" class="list-group-item list-group-item-action text-primary">Zúčtovanie</a>
+                <a href="/dve_percenta" class="list-group-item list-group-item-action text-primary">Poukázanie 2% dane</a>
+            {% else %}
+                <a href="/prihlasenie" class="list-group-item list-group-item-action text-primary">Prihlásiť sa</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
