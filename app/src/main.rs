@@ -17,13 +17,14 @@ fn rocket() -> _ {
         pages::prihlasenie,
         pages::pouzivatelsky_panel,
         pages::zuctovanie_ziadost,
+        pages::zuctovanie_ziadost_nezdanitelne_casti,
         requests::login_request,
-        requests::logout_request
-        ])
-    .mount("/js", FileServer::from(relative!("src/frontend/js")))
-    .mount("/img", FileServer::from(relative!("src/frontend/img")))
-    .mount("/css", FileServer::from(relative!("src/frontend/css")))
+        requests::logout_request,
+        requests::post_personal_info
+    ])
+    .mount("/js", FileServer::from("src/frontend/js"))
+    .mount("/img", FileServer::from("src/frontend/img"))
+    .mount("/css", FileServer::from("src/frontend/css"))
     .attach(Template::fairing())
-    
-    
+
 }
