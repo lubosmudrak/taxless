@@ -38,7 +38,7 @@ pub fn dve_percenta() -> Template{
 /// Screen for login and user registration
 #[get("/prihlasenie")]
 pub fn prihlasenie() -> Template{
-    Template::render("Prihlasenie", context!{
+    Template::render("prihlasenie", context!{
         page_title: "Prihlásenie"
     })
 }
@@ -59,7 +59,13 @@ pub fn zuctovanie_ziadost() -> Template{
     })
 }
 
-
+/// The front page for application for income tax settlement
+#[get("/zuctovanie_ziadost/nezdanitelne_casti")]
+pub fn zuctovanie_ziadost_nezdanitelne_casti() -> Template{
+    Template::render("zuctovanie_ziadost_nieco", context!{
+        page_title: "Zúčtovanie niečo"
+    })
+}
 
 //UNIT TESTS
 #[cfg(test)]
